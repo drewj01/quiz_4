@@ -1,0 +1,29 @@
+import random
+from datetime import datetime
+import random
+def generar_nombre():
+    nombres = ["Luigi", "Zelda", "Mario", "Kratos"]
+    return random.choice(nombres)
+
+
+def generar_clase():
+    clases = ["Plomero", "Mago", "Plomero", "Guerrero"]
+    return random.choice(clases)
+
+def geenerar_hp():
+    return random.randint(80, 120)
+
+def mostrar_fecha():
+    ahora = datetime.now()
+    print(f"{ahora.day}/{ahora.month}/{ahora.year}")
+
+
+print("=== GENERADOR DE AVENTURAS ===")
+mostrar_fecha()
+
+for i in range(3):
+    nombre = generar_nombre()
+    clase = generar_clase()
+    hp = geenerar_hp()
+    
+    print(f"Heroe {i+1}: {nombre} | {clase} | HP: {hp}")
